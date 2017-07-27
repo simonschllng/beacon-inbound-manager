@@ -363,7 +363,7 @@ function bim_redirect_beacon_inbound(){
   }
 
   $post_meta = get_post_meta($post->ID);
-  $url = $post_meta[$prefix . '-destination-url'][0];
+  $url = $post_meta[$prefix . '-url-destination'][0];
 
   if($url){
     bim_redirect( $url );
