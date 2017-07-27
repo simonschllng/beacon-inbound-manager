@@ -1,5 +1,6 @@
 === Beacon Inbound Manager ===
-Contributors: simschi
+Contributors: cottoneyejoe
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FZ786BZ5FZJGU
 Tags: beacon, url, ble, eddystone
 Requires at least: 3.7
 Tested up to: 4.8
@@ -18,8 +19,16 @@ The Beacon Inbound Manager helps you to organize all your Bluetooth BLE beacons.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Add beacons and target them on landing pages
 
+== Screenshots ==
 
-== Version Log ==
+1. List of beacons
+2. Configure a new beacon
+
+== Upgrade Notice ==
+
+Initial Release with basic functionality.
+
+== Changelog ==
 
 = 1.0
  * Initial Release
