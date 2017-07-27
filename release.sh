@@ -4,7 +4,7 @@
 # (C) 2017 Simon Schilling
 # 
 
-env_file="../../.env"
+env_file=".env"
 
 ## .env file content: #######
 #                           #
@@ -40,9 +40,15 @@ mkdir directory
 cd directory
 svn co https://plugins.svn.wordpress.org/beacon-inbound-manager
 cd beacon-inbound-manager/
+
 rm -Rf trunk/*
-rsync -av --progress ../../. trunk/ --exclude directory --exclude .git --exclude release.sh --exclude .env
+rsync -av --progress ../../. trunk/ --exclude directory --exclude .git --exclude release.sh --exclude .env --exclude wpd-assets
+
+rm -Rf assets/*
+cp ../../wpd-assets/* assets/.
+
 svn add trunk/*
+svn add assets/*
 svn ci -m "$(git log -1 --pretty=%B | head -1)" --username $directory_username --password $directory_password
 
 cd ../..
